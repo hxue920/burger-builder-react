@@ -4,12 +4,12 @@ import { BrowserRouter } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import reducer from './store/reducer';
+import burgerBuilderReducer from './store/reducers/burgerBuilder';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(burgerBuilderReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 const app = (
   <Provider store={store}>
